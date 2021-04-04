@@ -1,6 +1,7 @@
 package ru.netology;
 
 import com.codeborne.selenide.SelenideElement;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.exactText;
@@ -9,9 +10,13 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class PositiveTest {
 
+    @BeforeEach
+    void setup() {
+        open("http://localhost:9999");
+    }
+
     @Test
     void shouldTestSomething() {
-        open("http://localhost:9999");
         SelenideElement form = $("[class='form form_size_m form_theme_alfa-on-white']");
         form.$("[data-test-id='name'] input").setValue("Василий");
         form.$("[data-test-id='phone'] input").setValue("+79990001122");
@@ -22,7 +27,6 @@ public class PositiveTest {
 
     @Test
     void shouldTestTwoWordsInName() {
-        open("http://localhost:9999");
         SelenideElement form = $("[class='form form_size_m form_theme_alfa-on-white']");
         form.$("[data-test-id='name'] input").setValue("Иванов Василий");
         form.$("[data-test-id='phone'] input").setValue("+79990001122");
@@ -33,7 +37,6 @@ public class PositiveTest {
 
     @Test
     void shouldTestTwoWordsWithDashInSurname() {
-        open("http://localhost:9999");
         SelenideElement form = $("[class='form form_size_m form_theme_alfa-on-white']");
         form.$("[data-test-id='name'] input").setValue("Иванов-Петров Василий");
         form.$("[data-test-id='phone'] input").setValue("+79990001122");
@@ -44,7 +47,6 @@ public class PositiveTest {
 
     @Test
     void shouldTestSmallAndBigWordsInName() {
-        open("http://localhost:9999");
         SelenideElement form = $("[class='form form_size_m form_theme_alfa-on-white']");
 //        султан Занзибара в 1890—1893 годах
         form.$("[data-test-id='name'] input").setValue("Али ибн Саид");
@@ -56,7 +58,6 @@ public class PositiveTest {
 
     @Test
     void shouldTestFourSmallAndBigWordsWithDashInName() {
-        open("http://localhost:9999");
         SelenideElement form = $("[class='form form_size_m form_theme_alfa-on-white']");
 //        Султан Египта и Хиджаза, мамлюк абхазского происхождения.
         form.$("[data-test-id='name'] input").setValue("Али-бей аль-Кабир");
