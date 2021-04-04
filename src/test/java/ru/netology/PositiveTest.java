@@ -22,7 +22,8 @@ public class PositiveTest {
         form.$("[data-test-id='phone'] input").setValue("+79990001122");
         form.$("[data-test-id='agreement']").click();
         form.$("[type='button']").click();
-        $("[data-test-id='order-success']").shouldHave(exactText(" Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+        $("[data-test-id='order-success']").shouldHave(exactText(" Ваша заявка успешно отправлена!," +
+                " Наш менеджер свяжется с вами в ближайшее время."));
     }
 
     @Test
@@ -32,7 +33,8 @@ public class PositiveTest {
         form.$("[data-test-id='phone'] input").setValue("+79990001122");
         form.$("[data-test-id='agreement']").click();
         form.$("[type='button']").click();
-        $("[data-test-id='order-success']").shouldHave(exactText(" Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+        $("[data-test-id='order-success']").shouldHave(exactText(" Ваша заявка успешно отправлена!," +
+                " Наш менеджер свяжется с вами в ближайшее время."));
     }
 
     @Test
@@ -42,7 +44,8 @@ public class PositiveTest {
         form.$("[data-test-id='phone'] input").setValue("+79990001122");
         form.$("[data-test-id='agreement']").click();
         form.$("[type='button']").click();
-        $("[data-test-id='order-success']").shouldHave(exactText(" Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+        $("[data-test-id='order-success']").shouldHave(exactText(" Ваша заявка успешно отправлена!," +
+                " Наш менеджер свяжется с вами в ближайшее время."));
     }
 
     @Test
@@ -53,7 +56,8 @@ public class PositiveTest {
         form.$("[data-test-id='phone'] input").setValue("+79990001122");
         form.$("[data-test-id='agreement']").click();
         form.$("[type='button']").click();
-        $("[data-test-id='order-success']").shouldHave(exactText(" Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+        $("[data-test-id='order-success']").shouldHave(exactText(" Ваша заявка успешно отправлена!," +
+                " Наш менеджер свяжется с вами в ближайшее время."));
     }
 
     @Test
@@ -64,7 +68,8 @@ public class PositiveTest {
         form.$("[data-test-id='phone'] input").setValue("+79990001122");
         form.$("[data-test-id='agreement']").click();
         form.$("[type='button']").click();
-        $("[data-test-id='order-success']").shouldHave(exactText(" Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+        $("[data-test-id='order-success']").shouldHave(exactText(" Ваша заявка успешно отправлена!," +
+                " Наш менеджер свяжется с вами в ближайшее время."));
     }
 
 }
