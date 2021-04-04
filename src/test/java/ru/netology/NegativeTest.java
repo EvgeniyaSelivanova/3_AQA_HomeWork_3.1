@@ -23,7 +23,7 @@ public class NegativeTest {
         form.$("[data-test-id='phone'] input").setValue("+79990001122");
         form.$("[data-test-id='agreement']").click();
         form.$("[type='button']").click();
-        $("[data-test-id='name'] .input_invalid .input__sub").should(exactText("Имя и Фамилия указаные неверно. ," +
+        $("[data-test-id='name'].input_invalid .input__sub").should(exactText("Имя и Фамилия указаные неверно." +
                 " Допустимы только русские буквы, пробелы и дефисы.")).shouldBe(Condition.visible);
     }
 
@@ -33,7 +33,7 @@ public class NegativeTest {
         form.$("[data-test-id='phone'] input").setValue("+79990001122");
         form.$("[data-test-id='agreement']").click();
         form.$("[type='button']").click();
-        $("[data-test-id='name'] .input_invalid .input__sub").should(exactText("Поле обязательно," +
+        $("[data-test-id='name'].input_invalid .input__sub").should(exactText("Поле обязательно" +
                 " для заполнения")).shouldBe(Condition.visible);
     }
 
@@ -43,9 +43,8 @@ public class NegativeTest {
         form.$("[data-test-id='name'] input").setValue("Иванов Василий");
         form.$("[data-test-id='agreement']").click();
         form.$("[type='button']").click();
-        $("[data-test-id='phone'] .input_invalid .input__sub").should(exactText("Поле обязательно," +
+        $("[data-test-id='phone'].input_invalid .input__sub").should(exactText("Поле обязательно" +
                 " для заполнения")).shouldBe(Condition.visible);
-
     }
 
     @Test
@@ -55,7 +54,7 @@ public class NegativeTest {
         form.$("[data-test-id='phone'] input").setValue("79990001122");
         form.$("[data-test-id='agreement']").click();
         form.$("[type='button']").click();
-        $("[data-test-id='phone'] .input_invalid .input__sub").should(exactText("Телефон указан неверно.," +
+        $("[data-test-id='phone'].input_invalid .input__sub").should(exactText("Телефон указан неверно." +
                 " Должно быть 11 цифр, например, +79012345678.")).shouldBe(Condition.visible);
     }
 
@@ -65,7 +64,7 @@ public class NegativeTest {
         form.$("[data-test-id='name'] input").setValue("Иванов Василий");
         form.$("[data-test-id='phone'] input").setValue("+79990001122");
         form.$("[type='button']").click();
-        $("[data-test-id='agreement'] .input_invalid").should(visible);
+        $("[data-test-id='agreement'].input_invalid").should(visible);
     }
 
 }
